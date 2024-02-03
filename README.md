@@ -9,3 +9,13 @@ All projects created in Snack are publicly available, so you can easily share th
 If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
 
 Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+
+# COMO EJECUTAR
+
+Para ejecutar el proyecto es necesario:
+
+1.- Abrir la carpeta en la terminal
+2.- ejecutar el comando nmp install 
+3.- ejecutar el comando npm start
+4.- Escanear el QR generado
+

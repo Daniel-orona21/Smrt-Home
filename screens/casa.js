@@ -146,28 +146,7 @@ export default function CasaScreen() {
         </View>
 
 
-        <View style={styles.snackbarContainer}>
-          <TouchableOpacity onPress={() => console.log('Presionado Casa')}>
-            <View style={styles.snackbarSection}>
-              <Image source={require('../assets/casa.png')} style={styles.iconoCasa} />
-              <Text style={styles.snackbarText}>Casa</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity onPress={() => console.log('Presionado Servicios')}>
-            <View style={styles.snackbarSection}>
-              <Image source={require('../assets/servicios.png')} style={styles.iconoServicios} />
-              <Text style={styles.snackbarText}>Servicios</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity onPress={() => console.log('Presionado Super')}>
-            <View style={styles.snackbarSection}>
-              <Image source={require('../assets/super.png')} style={styles.iconoSuper} />
-              <Text style={styles.snackbarText}>Super</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
+        
       </SafeAreaView>
     </ImageBackground>
   );
@@ -280,41 +259,5 @@ const styles = StyleSheet.create({
     marginRight: 15,
     resizeMode: 'contain',
   },
-  snackbarContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    paddingVertical: 18,
-    height: 95,
-    zIndex: 2,
-  },
-  snackbarSection: {
-    alignItems: 'center',
-  },
-
-  iconoCasa: {
-    width: 20,
-    height: 20,
-    resizeMode: 'contain',
-  },
-  iconoServicios: {
-    width: 20,
-    height: 20,
-    resizeMode: 'contain',
-  },
-  iconoSuper: {
-    width: 20,
-    height: 20,
-    resizeMode: 'contain',
-  },
-  snackbarText: {
-    color: 'white',
-    marginTop: 5,
-    fontWeight: 'bold',
-    fontSize: 12,
-  },
+  
 });
