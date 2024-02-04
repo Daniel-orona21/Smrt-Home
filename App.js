@@ -61,6 +61,8 @@ export default function App() {
             headerTintColor: 'black', 
           }}
         >
+          
+          
           {({ navigation }) => (
             <HomeScreen
               navigation={navigation}
