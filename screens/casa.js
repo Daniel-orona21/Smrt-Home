@@ -128,10 +128,12 @@ export default function CasaScreen() {
             <View style={styles.circle}>
               <Image source={require('../assets/tv.png')} style={styles.iconoCirculo} />
             </View>
+            <TouchableOpacity>
             <View style={{ flexDirection: 'column', marginLeft: 10 }}>
               <Text style={styles.textoCaja3}>Seguir viendo en Sala de Estar</Text>
               <Text style={styles.textoCaja4}>No se ha encontrado contenido</Text>
             </View>
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -261,3 +263,4 @@ const styles = StyleSheet.create({
   },
   
 });
+

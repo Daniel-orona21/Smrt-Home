@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
-import { Text, SafeAreaView, StyleSheet, ImageBackground, Image, TouchableOpacity, View } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'; 
-
-const Tab = createBottomTabNavigator();
+import {
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 export default function ServiciosScreen() {
   const [box1Color, setBox1Color] = useState('rgba(0, 0, 0, 0.5)');
@@ -49,9 +53,9 @@ export default function ServiciosScreen() {
       <SafeAreaView style={styles.container}>
         <Text style={styles.titulo}>Servicios</Text>
 
-      
+        {/* Contenedor de cajas */}
         <View style={styles.boxesContainer}>
-       
+          {/* Caja 1 */}
           <TouchableOpacity onPress={() => handleBoxPress(1)}>
             <View style={[
               styles.box,
@@ -67,7 +71,7 @@ export default function ServiciosScreen() {
             </View>
           </TouchableOpacity>
 
-
+    
           <TouchableOpacity onPress={() => handleBoxPress(2)}>
             <View style={[
               styles.box,
@@ -85,7 +89,7 @@ export default function ServiciosScreen() {
         </View>
 
         <View style={styles.boxesContainer}>
-       
+          {/* Caja 3 */}
           <TouchableOpacity onPress={() => handleBoxPress(3)}>
             <View style={[
               styles.box,
@@ -101,7 +105,7 @@ export default function ServiciosScreen() {
             </View>
           </TouchableOpacity>
 
-          
+
           <TouchableOpacity onPress={() => handleBoxPress(4)}>
             <View style={[
               styles.box,
@@ -118,7 +122,7 @@ export default function ServiciosScreen() {
           </TouchableOpacity>
         </View>
 
-      
+
         <View style={styles.boxesContainer2}>
           <View style={styles.box2}>
             <View style={styles.circle}>
@@ -131,7 +135,7 @@ export default function ServiciosScreen() {
           </View>
         </View>
 
-   
+       
         <View style={styles.iconContainer}>
           <TouchableOpacity onPress={() => console.log('Presionado icono 1')}>
             <Image source={require('../assets/mas.png')} style={styles.mas} />
@@ -141,35 +145,12 @@ export default function ServiciosScreen() {
           </TouchableOpacity>
         </View>
 
-       
-        <View style={styles.snackbarContainer}>
-          <TouchableOpacity onPress={() => console.log('Presionado Casa')}>
-            <View style={styles.snackbarSection}>
-              <FontAwesome5 name="home" size={20} color="white" style={styles.iconoCasa} />
-              <Text style={styles.snackbarText}>Casa</Text>
-            </View>
-          </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => console.log('Presionado Servicios')}>
-            <View style={styles.snackbarSection}>
-              <FontAwesome5 name="tools" size={20} color="white" style={styles.iconoServicios} />
-              <Text style={styles.snackbarText}>Servicios</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity onPress={() => console.log('Presionado Super')}>
-            <View style={styles.snackbarSection}>
-              <FontAwesome5 name="shopping-cart" size={20} color="white" style={styles.iconoSuper} />
-              <Text style={styles.snackbarText}>Super</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
+        
       </SafeAreaView>
     </ImageBackground>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -278,41 +259,6 @@ const styles = StyleSheet.create({
     marginRight: 15,
     resizeMode: 'contain',
   },
-  snackbarContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    paddingVertical: 18,
-    height: 95,
-    zIndex: 2,
-  },
-  snackbarSection: {
-    alignItems: 'center',
-  },
-
-  iconoCasa: {
-    width: 20,
-    height: 20,
-    resizeMode: 'contain',
-  },
-  iconoServicios: {
-    width: 20,
-    height: 20,
-    resizeMode: 'contain',
-  },
-  iconoSuper: {
-    width: 20,
-    height: 20,
-    resizeMode: 'contain',
-  },
-  snackbarText: {
-    color: 'white',
-    marginTop: 5,
-    fontWeight: 'bold',
-    fontSize: 12,
-  },
+  
 });
+

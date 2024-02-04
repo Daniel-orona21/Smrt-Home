@@ -15,7 +15,8 @@ import PickerSelect from 'react-native-picker-select';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import CasaScreen from './screens/casa';
+
+import { MyTabs } from './navigation';
 
 
 const Stack = createStackNavigator();
@@ -25,7 +26,6 @@ const flags = {
   México: require('./assets/Mexico.png'),
   USA: require('./assets/usa.png'),
   Canadá: require('./assets/canada.png'),
-  
 };
 
 
@@ -73,8 +73,8 @@ export default function App() {
           )}
         </Stack.Screen>
         <Stack.Screen
-          name="Casa"
-          component={CasaScreen}
+          name="Menu"
+          component={MyTabs}
           options={{
             
             headerTitleStyle: {
@@ -104,7 +104,7 @@ const HomeScreen = ({
   const handleContinuePress = () => {
     console.log('Continuar presionado');
     Keyboard.dismiss();
-    navigation.navigate('Casa');
+    navigation.navigate('Menu');
   };
 
   return (
