@@ -6,7 +6,8 @@ import {
   View,
   TouchableOpacity,
   Image,
-  ImageBackground
+  ImageBackground,
+  ScrollView,
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 
@@ -14,52 +15,159 @@ export default function SuperScreen() {
 
   return (
     <ImageBackground
-      source={require('../assets/fondo6.jpg')}
+      source={require('../assets/fondo.jpg')}
       style={styles.backgroundImage}
     >
+      
       <SafeAreaView style={styles.container}>
+     
         <Text style={styles.titulo}>Super</Text>   
 
         <View style={styles.swiperContainer}>
           <Swiper
             showsButtons={false}
-            loop={false}
+            loop={true}
             containerStyle={styles.swiperWrapper}
           >
             <View style={styles.slide}>
-              <Image source={require('../assets/img5.jpg')} style={styles.foto} />
+              <Image source={require('../assets/oferta3.jpg')} style={styles.foto} />
             </View>
             <View style={styles.slide}>
-              <Image source={require('../assets/img2.jpeg')} style={styles.foto} />
+              <Image source={require('../assets/oferta2.jpg')} style={styles.foto} />
             </View>
             <View style={styles.slide}>
-              <Image source={require('../assets/img1.jpg')} style={styles.foto} />
-            </View>
-            <View style={styles.slide}>
-              <Image source={require('../assets/img4.jpg')} style={styles.foto} />
-            </View>
-            <View style={styles.slide}>
-              <Image source={require('../assets/img3.jpg')} style={styles.foto} />
+              <Image source={require('../assets/oferta.jpg')} style={styles.foto} />
             </View>
           </Swiper>
         </View>
 
-        <Text style={styles.ofertas}>Ofertas Especiales</Text> 
+        <Text style={styles.ofertas}>Ofertas Especiales!</Text> 
+
+       
 
         <View style={styles.iconContainer}>
           <TouchableOpacity onPress={() => console.log('Presionado Puntos')}>
             <Image source={require('../assets/puntos.png')} style={styles.puntos} />
           </TouchableOpacity>
         </View>
+
+        
+
+        <Text style={styles.category}>✪ Categorías</Text>
+
+        <ScrollView>
+       
+        <View style={styles.boxContainer}>
+        <TouchableOpacity>
+          <View style={styles.box}>
+            <View style={styles.circle}>
+              <Image source={require('../assets/1.png')} style={styles.imagenCirculo} />
+            </View>
+            <Text style={styles.textoCaja}>Frutas y Verduras</Text>
+          </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+          <View style={styles.box}>
+            <View style={styles.circle}>
+            <Image source={require('../assets/2.png')} style={styles.imagenCirculo} />
+            </View>
+            <Text style={styles.textoCaja}>Panadería</Text>
+          </View>
+          </TouchableOpacity>
+        </View>
+       
+
+      
+        <View style={styles.boxContainer}>
+        <TouchableOpacity>
+          <View style={styles.box}>
+            <View style={styles.circle}>
+            <Image source={require('../assets/3.png')} style={styles.imagenCirculo} />
+            </View>
+            <Text style={styles.textoCaja}>Área Blanca</Text>
+          </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+          <View style={styles.box}>
+            <View style={styles.circle}>
+            <Image source={require('../assets/4.png')} style={styles.imagenCirculo} />
+            </View>
+            <Text style={styles.textoCaja}>Lácteos</Text>
+          </View>
+          </TouchableOpacity>
+        </View>
+       
+       
+        <View style={styles.boxContainer}>
+        <TouchableOpacity>
+          <View style={styles.box}>
+            <View style={styles.circle}>
+            <Image source={require('../assets/5.png')} style={styles.imagenCirculo} />
+            </View>
+            <Text style={styles.textoCaja}>Vinos y Licores</Text>
+          </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+          <View style={styles.box}>
+            <View style={styles.circle}>
+            <Image source={require('../assets/6.png')} style={styles.imagenCirculo} />
+            </View>
+            <Text style={styles.textoCaja}>Electrónica</Text>
+          </View>
+          </TouchableOpacity>
+        </View>
+        </ScrollView>
       </SafeAreaView>
     </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  category: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    color: 'white',
+    marginLeft: 20,
+    marginTop: 25,
+    marginBottom: 10,
+  },
+  textoCaja: {
+    fontWeight: 'bold',
+    fontSize: 10,
+    color: 'white',
+    marginTop: 5,
+  },
   container: {
     flex: 1,
     padding: 8,
+  },
+  boxContainer: {
+    justifyContent: 'center',
+    flexDirection: 'row',
+    
+  },
+  box: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    width: 135,
+    height: 135,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 20, 
+  },
+  circle: {
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    width: 80,
+    height: 80,
+    borderRadius: 100,
+    marginTop: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  imagenCirculo: {
+    width: 35,
+    height: 35,
   },
   titulo: {
     color: 'white',
@@ -98,13 +206,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   swiperContainer: {
-    height: 120,
+    height: 160,
     borderRadius: 8,
     marginTop: 10,
     overflow: 'hidden',
+    marginLeft: 20,
+    marginRight: 20,
   },
   swiperWrapper: {
     alignItems: 'center',
+
   },
   slide: {
     flex: 1,
@@ -112,7 +223,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: '100%',
-    borderRadius: 10,
   },
   foto: {
     width: '100%',

@@ -23,7 +23,7 @@ export function MyTabs() {
       tabBarStyle: {
         backgroundColor: 'black',
         position: 'absolute', 
-        opacity: 0.5, 
+        opacity: 0.7, 
       },
       tabBarIconStyle: {
         marginTop: 10,
@@ -52,7 +52,12 @@ export function MyTabs() {
                     tabBarIcon: ({ color, size }) => (
                         <AntDesign name="shoppingcart" size={size} color={color} />
                     ),
-                    headerShown: false,
+                    headerShown: ({
+                        headerShown: false,
+                    }),
+                    
+                    headerTransparent: true,
+                
                 }}
             />
             <Tab.Screen 

@@ -87,6 +87,7 @@ export default function App() {
             },
             headerTintColor: 'white',
             headerTransparent: true,
+            headerBackTitle: 'Volver',
           }}
         />
       </Stack.Navigator>
