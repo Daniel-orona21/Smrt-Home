@@ -33,18 +33,6 @@ export function MyTabs() {
     },
     }}
 >
-            <Tab.Screen
-                name="Casa" 
-                component={CasaScreen} 
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="home" size={size} color={color} />
-                    ),
-                    
-                    headerShown: false,
-                }}
-
-            />
             <Tab.Screen 
                 name="Super" 
                 component={SuperScreen} 
@@ -59,6 +47,18 @@ export function MyTabs() {
                     headerTransparent: true,
                 
                 }}
+            />
+            <Tab.Screen
+                name="Casa" 
+                component={CasaScreen} 
+                options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <Ionicons name="home" size={size} color={color} />
+                    ),
+                    
+                    headerShown: false,
+                }}
+
             />
             <Tab.Screen 
                 name="Servicios" 
